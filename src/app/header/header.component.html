@@ -1,0 +1,9 @@
+<nav *ngIf="currentId">
+  <button (click)="getMyPage()">My Page</button>
+  <button [routerLink]="['/friends', getCurrentId()]">My Friends</button>
+  <button routerLink="/news">News</button>
+  <br/>
+  <button (click)="logout()">Exit</button>
+  <button (click)="back()">Back</button>
+  <button *ngIf="isAdmin()" (click)="goToAdmin()" data-action="admin" type="button">Admin</button>
+</nav>

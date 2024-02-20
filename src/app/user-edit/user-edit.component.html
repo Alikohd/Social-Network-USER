@@ -1,0 +1,20 @@
+
+<div *ngIf="user">
+  <h2>Account {{user.name}}</h2>
+
+  <label for="user-name">Name: </label>
+  <input id="user-name" [(ngModel)]="user.name">
+  <br/>
+  <label for="user-birthdate">Birthdate: </label>
+  <input id="user-birthdate" [(ngModel)]="user.birthdate">
+  <br/>
+  <label for="user-email">Email: </label>
+  <input id="user-email" [(ngModel)]="user.email">
+  <br/>
+  <label for="user-photo">Photo: </label>
+  <input id="user-photo" [(ngModel)]="user.photoUrl">
+  <br/>
+</div>
+<button type="button" (click)="save()">save</button>
+
+

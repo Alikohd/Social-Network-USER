@@ -1,0 +1,26 @@
+<div *ngIf="newNews">
+  <label for="title">Title: </label>
+  <input id="title" [(ngModel)]="newNews.title">
+  <br/>
+  <label for="text">Text: </label>
+  <br/>
+  <input id="text" [(ngModel)]="newNews.text">
+  <br/>
+  <button id="add_news" class="buttons hovers" (click)="addNews()">Add news</button>
+</div>
+
+<label for="is-my-news">only my news</label>
+<input id="is-my-news" type="checkbox" [(ngModel)]="isMyNews"/>
+
+<div *ngFor="let n of news" class="list">
+  <div *ngIf="(isMyNews && user && n.userId === user?.id) || !isMyNews">
+    <h3 style="color: brown">{{n.userName}}</h3>
+    <h3 style="color: purple">Title: {{n.title}}</h3>
+    <h4>Text: {{n.text}}</h4>
+    <div *ngIf="user && n.userId === user?.id">
+      <button type="button" (click)="deleteNews(n.userId, n.newsId)">delete</button>
+    </div>
+    <br/>
+  </div>
+</div>
+

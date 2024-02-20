@@ -1,0 +1,13 @@
+<h2>Welcome!</h2>
+
+<div>
+  <label for="name">Name: </label>
+  <input id="name" [(ngModel)]="userName" placeholder="Enter your username">
+  <br/>
+  <label for="password">Password: </label>
+  <input id="password" type="password" [(ngModel)]="password" placeholder="Enter your password">
+  <br/>
+  <button type="button" (click)="login()">Sign in</button>
+
+  <button type="button" routerLink="/registration">Sign up</button>
+</div>

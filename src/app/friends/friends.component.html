@@ -1,0 +1,22 @@
+<h2>Friends</h2>
+
+<ul>
+  <li *ngFor="let friend of friends">
+    <div>
+      <button type="button" routerLink="/users/{{friend.id}}">
+        <h3>Name: {{friend.name}}</h3>
+        <h3>Birth date: {{friend.birthdate}}</h3>
+        <h3>Email: {{friend.email}}</h3>
+        <h3>Role: {{friend.role}}</h3>
+        <h3>Status: {{friend.status}}</h3>
+      </button>
+      <button type="button" (click)="delete(friend.id)" data-action="delete">Remove</button>
+    </div>
+  </li>
+</ul>
+
+<div>
+  <label for="add-friend">Name: </label>
+  <input id="add-friend" placeholder="name" type="text" [(ngModel)]="friendName">
+  <button type="submit" (click)="addFriend()">Add friend</button>
+</div>

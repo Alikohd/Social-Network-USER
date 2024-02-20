@@ -1,0 +1,19 @@
+<div *ngIf="user">
+  <h2>Registration</h2>
+
+  <label for="user-name">Name: </label>
+  <input id="user-name" [(ngModel)]="user.name" placeholder="Enter your name">
+  <br/>
+
+  <label for="user-email">Email: </label>
+  <input id="user-email" [(ngModel)]="user.email" placeholder="Enter your email">
+  <br/>
+
+  <label for="user-password">Password: </label>
+  <input id="user-password" [(ngModel)]="user.password" type="password" placeholder="Enter your password">
+  <br/>
+
+  <button type="button" (click)="save()">Save</button>
+  <button type="button" routerLink="/login">Sign in</button>
+</div>
+

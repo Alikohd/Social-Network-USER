@@ -1,0 +1,42 @@
+#add_news {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#add_news:hover {
+  background-color: #0056b3;
+}
+
+#is-my-news {
+  margin-bottom: 10px;
+}
+
+.list {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.list h3 {
+  color: brown;
+}
+
+.list h4 {
+  color: purple;
+}
+
+.list button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.list button:hover {
+  background-color: #c82333;
+}

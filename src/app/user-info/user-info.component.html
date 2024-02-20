@@ -1,0 +1,16 @@
+<div *ngIf="user">
+  <h2>Account {{user.name}}</h2>
+  <h3>Birthdate: {{user.birthdate}}</h3>
+  <h3>Email: {{user.email}}</h3>
+  <h3>Role: {{user.role}}</h3>
+  <h3>Status: {{user.status}}</h3>
+
+  <img ngSrc="{{user.photoUrl}}" alt="photo" width="150" height="200"/>
+  <br/>
+
+  <div *ngIf="currentId === user.id" class="button-container">
+    <button type="button" routerLink="/friends/{{user.id}}">Friends </button>
+    <button type="button" routerLink="/users/edit">Edit</button>
+    <button type="button" (click)="delete()">Delete Account</button>
+  </div>
+</div>
